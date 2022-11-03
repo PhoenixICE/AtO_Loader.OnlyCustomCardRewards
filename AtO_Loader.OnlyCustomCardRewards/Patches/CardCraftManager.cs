@@ -17,9 +17,8 @@ public static class CardCraftManager
     {
         cardListByClass = Globals.Instance.CardListByClass;
         cardListNotUpgradedByClass = Globals.Instance.CardListNotUpgradedByClass;
-        var tempDict = CreateCardClonesPrefix.CustomCards.ToDictionary(x => x.Key, x => x.Value.Select(y => y.Id).ToList());
-        Globals.Instance.CardListByClass = tempDict;
-        Globals.Instance.CardListNotUpgradedByClass = tempDict;
+        Globals.Instance.CardListByClass = CreateCardClonesPrefix.CustomCards.ToDictionary(x => x.Key, x => x.Value.Select(y => y.Id).ToList());
+        Globals.Instance.CardListNotUpgradedByClass = CreateCardClonesPrefix.CustomCards.ToDictionary(x => x.Key, x => x.Value.Where(y => y.CardUpgraded == CardUpgraded.No).Select(y => y.Id).ToList());
     }
 
     [HarmonyPostfix]
