@@ -7,7 +7,7 @@ using static Enums;
 namespace AtO_Loader.OnlyCustomCardRewards.Patches;
 
 [HarmonyPatch(typeof(RewardsManager),  "SetRewards")]
-public class ShowListCardsForCraft
+public class SetRewards
 {
     private static Dictionary<CardClass, List<string>> cardListNotUpgradedByClass;
 
