@@ -5,19 +5,23 @@ using HarmonyLib;
 
 namespace AtO_Loader.OnlyCustomCardRewards;
 
-[BepInPlugin(modGUID, modName, ModVersion)]
+[BepInPlugin(ModGUID, ModName, ModVersion)]
 public partial class Plugin : BaseUnityPlugin
 {
-    private const string modGUID = "IcyPhoenix.OnlyCustomCardRewards";
-    private const string modName = "AtO_Loader.OnlyCustomCardRewards";
+    private const string ModGUID = "IcyPhoenix.OnlyCustomCardRewards";
+    private const string ModName = "AtO_Loader.OnlyCustomCardRewards";
     private const string ModVersion = "0.0.1.0";
-    private readonly Harmony harmony = new(modGUID);
-    internal static new ManualLogSource Logger;
+    private readonly Harmony harmony = new(ModGUID);
+
+    /// <summary>
+    /// Gets or sets harmony Logger instance.
+    /// </summary>
+    internal static new ManualLogSource Logger { get; set; }
 
     private void Awake()
     {
         Plugin.Logger = base.Logger;
-        this.harmony.PatchAll(typeof(CardCraftManager));
+        this.harmony.PatchAll(typeof(SetRewards));
         this.harmony.PatchAll(typeof(ShowListCardsForCraft));
     }
 }
