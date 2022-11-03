@@ -17,6 +17,7 @@ public partial class Plugin : BaseUnityPlugin
     private void Awake()
     {
         Plugin.Logger = base.Logger;
+        this.harmony.PatchAll(typeof(CardCraftManager));
         this.harmony.PatchAll(typeof(ShowListCardsForCraft));
     }
 }
