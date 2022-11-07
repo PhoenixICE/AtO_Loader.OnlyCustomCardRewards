@@ -1,4 +1,4 @@
-﻿using AtO_Loader.Patches.CustomDataLoader;
+﻿using AtO_Loader.Patches;
 using HarmonyLib;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +17,8 @@ public static class ShowListCardsForCraft
     {
         cardListByClass = Globals.Instance.CardListByClass;
         cardListNotUpgradedByClass = Globals.Instance.CardListNotUpgradedByClass;
-        Globals.Instance.CardListByClass = CreateCardClonesPrefix.CustomCards.ToDictionary(x => x.Key, x => x.Value.Select(y => y.Id).ToList());
-        Globals.Instance.CardListNotUpgradedByClass = CreateCardClonesPrefix.CustomCards.ToDictionary(x => x.Key, x => x.Value.Where(y => y.CardUpgraded == CardUpgraded.No).Select(y => y.Id).ToList());
+        Globals.Instance.CardListByClass = DeserializeCards.CustomCards.ToDictionary(x => x.Key, x => x.Value.Select(y => y.Id).ToList());
+        Globals.Instance.CardListNotUpgradedByClass = DeserializeCards.CustomCards.ToDictionary(x => x.Key, x => x.Value.Where(y => y.CardUpgraded == CardUpgraded.No).Select(y => y.Id).ToList());
     }
 
     [HarmonyPostfix]

@@ -10,7 +10,7 @@ public partial class Plugin : BaseUnityPlugin
 {
     private const string ModGUID = "IcyPhoenix.OnlyCustomCardRewards";
     private const string ModName = "AtO_Loader.OnlyCustomCardRewards";
-    private const string ModVersion = "0.0.1.0";
+    private const string ModVersion = "0.0.1";
     private readonly Harmony harmony = new(ModGUID);
 
     /// <summary>
@@ -22,6 +22,7 @@ public partial class Plugin : BaseUnityPlugin
     {
         Plugin.Logger = base.Logger;
         this.harmony.PatchAll(typeof(SetRewards));
+        this.harmony.PatchAll(typeof(InitCorruption));
         this.harmony.PatchAll(typeof(ShowListCardsForCraft));
     }
 }

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtO_Loader.OnlyCustomCardRewards", "AtO_Loader.OnlyCustomCardRewards\AtO_Loader.OnlyCustomCardRewards.csproj", "{915B3670-4639-4A82-A6B7-41AAE92AC01B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtO_Loader.OnlyCustomCardRewards", "AtO_Loader.OnlyCustomCardRewards\AtO_Loader.OnlyCustomCardRewards.csproj", "{915B3670-4639-4A82-A6B7-41AAE92AC01B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtO_Loader.OnlyCorruptedRewards", "AtO_Loader.OnlyCorruptedRewards\AtO_Loader.OnlyCorruptedRewards.csproj", "{1701F1F6-D422-4CCF-A49F-5EA29FD410C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{915B3670-4639-4A82-A6B7-41AAE92AC01B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{915B3670-4639-4A82-A6B7-41AAE92AC01B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{915B3670-4639-4A82-A6B7-41AAE92AC01B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1701F1F6-D422-4CCF-A49F-5EA29FD410C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1701F1F6-D422-4CCF-A49F-5EA29FD410C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1701F1F6-D422-4CCF-A49F-5EA29FD410C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1701F1F6-D422-4CCF-A49F-5EA29FD410C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
