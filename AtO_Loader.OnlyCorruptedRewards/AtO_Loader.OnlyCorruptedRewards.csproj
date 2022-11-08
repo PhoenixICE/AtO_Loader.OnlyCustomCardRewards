@@ -24,6 +24,9 @@
 		<Reference Include="Assembly-CSharp">
 			<HintPath>..\libs\Assembly-CSharp.dll</HintPath>
 		</Reference>
+		<Reference Include="AtO_Loader">
+		  <HintPath>..\..\AtO_Loader\bin\Release\netstandard21\AtO_Loader.dll</HintPath>
+		</Reference>
 	</ItemGroup>
 
 </Project>
